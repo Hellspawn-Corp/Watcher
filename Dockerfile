@@ -19,4 +19,4 @@ WORKDIR /app
 COPY --from=build /app/prod ./prod
 COPY --from=prod-deps /app/node_modules ./node_modules
 COPY --from=prod-deps /app/package.json ./
-CMD ["npm", "run", "start", ]
+CMD ["npm", "run", "start"]
