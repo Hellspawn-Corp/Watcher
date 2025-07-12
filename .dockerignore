@@ -1,0 +1,9 @@
+/node_modules/
+/prod/
+.env
+.env.sample
+.gitignore
+LICENSE
+README.md
+Dockerfile
+FUNDING.yml
