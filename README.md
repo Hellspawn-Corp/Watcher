@@ -4,16 +4,21 @@ Awesomesauce swag discord bot that shows you info about your infra and more!!!
 
 ## Installation
 
-### Docker
+### With Docker
+
+#### Docker Compose
 
 ```bash
+docker compose up -d
 ```
 
-#### Compose
+### With Podman
 
-#### Standalone
+#### Podman Compose
 
-### Podman
+```bash
+podman compose up -d
+```
 
 shotout ^^^
 
@@ -22,6 +27,8 @@ shotout ^^^
 #### Helm -->
 
 ### Manual
+
+Manual installation is not recommended, but if you want to do it anyway, follow the steps for manual building from the [Development](#development) section below.
 
 ## Development
 
