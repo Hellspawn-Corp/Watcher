@@ -8,19 +8,21 @@ Awesomesauce swag discord bot that shows you info about your infra and more!!!
 
 #### Docker Compose
 
+See the provided [compose.yml](compose.yml) file for sample configuration.
+
 ```bash
 docker compose up -d
 ```
 
 ### With Podman
 
+shoutout ^^^
+
 #### Podman Compose
 
 ```bash
 podman compose up -d
 ```
-
-shotout ^^^
 
 <!-- ### Kubernetes
 
@@ -34,14 +36,14 @@ Manual installation is not recommended, but if you want to do it anyway, follow 
 
 ### Prerequisites
 
-1. Clone the repository:
+- Clone the repository:
 
-```bash
-git clone https://github.com/Hellspawn-Corp/Watcher.git
-```
+    ```bash
+    git clone https://github.com/Hellspawn-Corp/Watcher.git
+    ```
 
-2a. For containerized development, install Docker or Podman.
-2b. For manual development, install Node.js (or compatible runtime) and pnpm.
+- For containerized development, install Docker or Podman.
+- For manual development, install Node.js (or compatible runtime) and pnpm.
 
 ### Building
 
