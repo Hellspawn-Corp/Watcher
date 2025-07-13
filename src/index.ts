@@ -23,4 +23,3 @@ import { onInteraction } from "./events/onInteraction";
 		console.log("logged in!");
 	});
 })();
-

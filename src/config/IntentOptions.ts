@@ -1,4 +1,6 @@
-import {GatewayIntentBits} from 'discord.js';
+import { GatewayIntentBits } from "discord.js";
 
-export const intentOptions = [GatewayIntentBits.Guilds,
-	GatewayIntentBits.GuildMessages];
+export const intentOptions = [
+	GatewayIntentBits.Guilds,
+	GatewayIntentBits.GuildMessages,
+];
