@@ -1,11 +1,12 @@
-export const validateEnv = () => {
-	const envs = [
-		'BOT_TOKEN',
-	];
+import { BotVars } from "../config/EnvironmentVars";
 
-	envs.forEach(env => {
+export const validateEnv = () => {
+	const envs = ["BOT_TOKEN"];
+
+	envs.forEach((env) => {
 		if (!process.env[env]) {
 			throw new Error(`${env} is not defined`);
 		}
+		BotVars[env] = process.env[env];
 	});
 };
