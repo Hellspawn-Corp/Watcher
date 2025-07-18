@@ -1,8 +1,8 @@
 import type {
-	Interaction,
 	SlashCommandBuilder,
 	SlashCommandSubcommandsOnlyBuilder,
-} from "discord.js";
+} from "@discordjs/builders";
+import type { Interaction } from "discord.js";
 
 export type Command = {
 	data:

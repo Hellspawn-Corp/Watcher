@@ -1,7 +1,6 @@
-import { EmbedBuilder, REST, Routes, SlashCommandBuilder } from "discord.js";
-import { Command } from "../types/Command";
-import { BotVars } from "../config/EnvironmentVars";
-import { EOL } from "os";
+import { EOL } from "node:os";
+import { EmbedBuilder, SlashCommandBuilder } from "discord.js";
+import type { Command } from "../types/Command";
 
 export const help: Command = {
 	data: new SlashCommandBuilder()
