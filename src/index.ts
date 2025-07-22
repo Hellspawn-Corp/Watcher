@@ -1,9 +1,9 @@
 import { ActivityType, Client } from "discord.js";
-import { intentOptions } from "./config/IntentOptions";
-import { validateEnv } from "./utils/validateEnv";
 import { BotVars } from "./config/EnvironmentVars";
-import { onReady } from "./events/onReady";
+import { intentOptions } from "./config/IntentOptions";
 import { onInteraction } from "./events/onInteraction";
+import { onReady } from "./events/onReady";
+import { validateEnv } from "./utils/validateEnv";
 
 (async () => {
 	validateEnv();

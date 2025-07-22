@@ -1,7 +1,7 @@
 import { EOL } from "node:os";
 import { EmbedBuilder, SlashCommandBuilder } from "discord.js";
-import type { Command } from "../types/Command";
 import { pingServer } from "../modules/minecraft/ping";
+import type { Command } from "../types/Command";
 import type { PingResponse } from "../types/minecraft/PingResponse";
 
 export const ping: Command = {
