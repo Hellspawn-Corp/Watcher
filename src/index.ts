@@ -1,12 +1,14 @@
 import { ActivityType, Client } from "discord.js";
 import { BotVars } from "./config/EnvironmentVars";
 import { intentOptions } from "./config/IntentOptions";
+import { prisma } from "./db/init";
 import { onInteraction } from "./events/onInteraction";
 import { onReady } from "./events/onReady";
 import { validateEnv } from "./utils/validateEnv";
 
 (async () => {
 	validateEnv();
+
 	const bot = new Client({ intents: intentOptions });
 
 	bot.on("ready", async () => onReady(bot));
@@ -22,4 +24,12 @@ import { validateEnv } from "./utils/validateEnv";
 		});
 		console.log("logged in!");
 	});
-})();
+})()
+	.then(async () => {
+		await prisma.$disconnect();
+	})
+	.catch(async (e) => {
+		console.error(e);
+		await prisma.$disconnect();
+		process.exit(1);
+	});

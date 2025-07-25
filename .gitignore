@@ -3,3 +3,4 @@
 .env
 .vscode/
 .eslintrc.json
+/generated/prisma

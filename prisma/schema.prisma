@@ -1,0 +1,27 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+  output   = "../generated/prisma"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Service {
+  id          String   @id @default(uuid())
+  service_url String
+  port        Int
+  icon_url    String
+  Uptime      Uptime[]
+}
+
+model Uptime {
+  id        String   @id @default(uuid())
+  service   Service  @relation(fields: [serviceId], references: [id])
+  serviceId String
+  timestamp DateTime @default(now())
+}
