@@ -3,15 +3,16 @@ FROM node:alpine AS build
 WORKDIR /app
 COPY . .
 RUN yes | npm install -g pnpm && \
-    yes | pnpm install && \
-    yes | pnpm run build
+	yes | pnpm install && \
+	yes | pnpm run prisma \
+	yes | pnpm run build
 
 # Stage 2: Production dependencies
 FROM node:alpine AS prod-deps
 WORKDIR /app
 COPY --from=build /app/package.json /app/pnpm-lock.yaml ./
 RUN yes | npm install -g pnpm && \
-    yes | pnpm install --prod
+	yes | pnpm install --prod
 
 # Stage 3: Final deploy
 FROM node:alpine AS deploy

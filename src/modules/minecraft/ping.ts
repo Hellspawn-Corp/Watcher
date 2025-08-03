@@ -1,5 +1,6 @@
 import mc, { type PingOptions } from "minecraft-protocol";
-import { type PingResponse, STATUS } from "../../types/minecraft/PingResponse";
+import { Status } from "../../../generated/prisma/client";
+import type { PingResponse } from "../../types/minecraft/PingResponse";
 
 export async function pingServer(
 	hostname: string,
@@ -15,7 +16,7 @@ export async function pingServer(
 			if (error) {
 				console.error("Error pinging the server:", error);
 				resolve({
-					status: STATUS.OFFLINE,
+					status: Status.OFFLINE,
 					message: `Error pinging the server: ${error.message}`,
 				});
 			} else {
@@ -28,7 +29,7 @@ export async function pingServer(
 					versionInfo = "Unknown";
 				}
 				resolve({
-					status: STATUS.ONLINE,
+					status: Status.ONLINE,
 					message: `Server is online! Version: ${versionInfo}`,
 				});
 			}

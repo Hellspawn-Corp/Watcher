@@ -11,8 +11,15 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+enum Status {
+	UNKNOWN
+	ONLINE
+	OFFLINE
+}
+
 model Service {
   id          String   @id @default(uuid())
+	name        String   @unique
   service_url String
   port        Int
   icon_url    String
@@ -23,5 +30,6 @@ model Uptime {
   id        String   @id @default(uuid())
   service   Service  @relation(fields: [serviceId], references: [id])
   serviceId String
+	status		Status
   timestamp DateTime @default(now())
 }

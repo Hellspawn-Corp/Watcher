@@ -1,10 +1,12 @@
+import { Status } from "../../../generated/prisma/client";
+
 export type PingResponse = {
-	status: STATUS;
+	status: Status;
 	message: string;
 };
 
-export enum STATUS {
-	UNKNOWN,
-	ONLINE,
-	OFFLINE,
-}
+// export enum STATUS {
+// 	UNKNOWN,
+// 	ONLINE,
+// 	OFFLINE,
+// }

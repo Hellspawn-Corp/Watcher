@@ -5,6 +5,7 @@
 	"main": ".prod/index.js",
 	"scripts": {
 		"build": "tsc",
+		"prisma": "npx prisma generate",
 		"start": "node -r dotenv/config ./prod/index.js",
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},

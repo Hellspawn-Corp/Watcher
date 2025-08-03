@@ -4,3 +4,8 @@ export type DiscordVars = {
 	APP_ID: string;
 	PUBLIC_KEY: string;
 };
+
+export type MinecraftVars = {
+	hostname: string;
+	port: number;
+};

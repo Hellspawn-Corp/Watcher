@@ -1,9 +1,9 @@
-import type { STATUS } from "./minecraft/PingResponse";
+import { Status } from "../../generated/prisma/client";
 
 export type UptimeData = {
 	service: string;
-	status: STATUS;
-	uptime: string;
+	status: Status;
+	uptime: Date[];
 	logo: string;
 	image: string;
 };
